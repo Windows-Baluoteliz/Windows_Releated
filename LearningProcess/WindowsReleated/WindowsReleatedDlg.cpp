@@ -11,7 +11,6 @@
 #define new DEBUG_NEW
 #endif
 
-
 // CAboutDlg dialog used for App About
 
 class CAboutDlg : public CDialogEx
@@ -97,8 +96,20 @@ BOOL CWindowsReleatedDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+#if 0
 	int nLen = CCommonFun::getSystemDefCharcterSize();
 	nLen = CCommonFun::getSystemDefCharcterSize();
+	
+	nLen = sizeof(MEMROYALIGNMENT);
+	LPMEMORYALIGNMENT lpData = new MEMROYALIGNMENT;
+	
+	CCommonFun::NetWorkEndian();
+#endif
+
+#if 1
+	CCommonFun::FileOperatorCdecl();
+#endif
+	
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
